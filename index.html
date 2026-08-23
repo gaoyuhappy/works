@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>数据分析作品集 | 高宇</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    background: #f5f6f8;
+    color: #1a1a2e;
+    min-height: 100vh;
+  }
+  .portfolio-root { max-width: 960px; margin: 0 auto; }
+
+  .p-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    color: #fff;
+    padding: 52px 40px 44px;
+    text-align: center;
+  }
+  .p-header-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    color: #a8c8f8;
+  }
+  .p-header h1 { font-size: 30px; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; }
+  .p-header .subtitle { font-size: 14px; color: rgba(255,255,255,0.58); margin-bottom: 24px; line-height: 1.7; }
+  .p-header-meta { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+  .p-header-meta span { font-size: 13px; color: rgba(255,255,255,0.48); display: flex; align-items: center; gap: 5px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; display: inline-block; }
+
+  .section-label { text-align: center; padding: 40px 20px 8px; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: #888; text-transform: uppercase; }
+  .section-hint { text-align: center; font-size: 14px; color: #666; margin-bottom: 28px; padding: 0 20px; }
+
+  .p-cards { padding: 0 20px 56px; display: flex; flex-direction: column; gap: 18px; }
+  .p-card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 26px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, transform 0.18s;
+    border: 1px solid #edf0f4;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .p-card:hover { box-shadow: 0 8px 32px rgba(15,52,96,0.13); transform: translateY(-2px); }
+  .card-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+  .icon-blue   { background: #eff6ff; }
+  .icon-purple { background: #f5f0ff; }
+  .icon-green  { background: #f0fdf4; }
+  .card-body { flex: 1; min-width: 0; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .card-title { font-size: 16px; font-weight: 700; color: #1a1a2e; line-height: 1.4; }
+  .badge { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 10px; letter-spacing: 0.3px; white-space: nowrap; }
+  .badge-top  { background: #fff1f0; color: #e03131; }
+  .badge-ab   { background: #fff9db; color: #d08800; }
+  .badge-auto { background: #ebfbee; color: #2f9e44; }
+  .card-desc { font-size: 13px; color: #666; line-height: 1.68; margin-bottom: 12px; }
+  .card-tags { display: flex; gap: 7px; flex-wrap: wrap; }
+  .tag { font-size: 11px; background: #f1f3f7; color: #555; padding: 3px 10px; border-radius: 8px; }
+  .card-arrow { color: #bbb; font-size: 18px; align-self: center; flex-shrink: 0; }
+  .p-card:hover .card-arrow { color: #0f3460; }
+
+  .p-footer { text-align: center; padding: 28px 20px; font-size: 12px; color: #aaa; border-top: 1px solid #eee; background: #fff; }
+
+  @media (max-width: 600px) {
+    .p-header { padding: 36px 16px 32px; }
+    .p-header h1 { font-size: 22px; }
+    .p-header-meta { gap: 12px; }
+    .p-cards { padding: 0 12px 48px; }
+    .p-card { padding: 18px 16px; gap: 14px; }
+    .card-icon { width: 42px; height: 42px; font-size: 18px; border-radius: 10px; }
+    .card-title { font-size: 14px; }
+    .card-desc { font-size: 12px; }
+    .section-label { padding-top: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="portfolio-root">
+
+  <header class="p-header">
+    <div class="p-header-tag">📊 Data Analytics Portfolio</div>
+    <h1>高宇 · 数据分析作品集</h1>
+    <p class="subtitle">
+      欢聚集团（Bigo Live）实习期间独立完成的三项数据分析项目<br>
+      覆盖问题拆解、指标体系设计、SQL取数到可视化交付的完整链路
+    </p>
+    <div class="p-header-meta">
+      <span><span class="dot"></span> 均已脱敏处理</span>
+      <span>· 实习时间：2026</span>
+    </div>
+  </header>
+
+  <p class="section-label">项目展示</p>
+  <p class="section-hint">点击卡片查看完整分析报告</p>
+
+  <div class="p-cards">
+
+    <a class="p-card" href="super_r.html" target="_blank" rel="noopener">
+      <div class="card-icon icon-blue">💎</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <span class="card-title">超R用户充值异动影响因素分析与运营修复</span>
+          <span class="badge badge-top">主推项目</span>
+        </div>
+        <p class="card-desc">
+          针对华语区月充值环比下降68万美金，按照用户价值分层拆解，定位超R贡献76%的降幅。进一步追踪68名充值下降用户，通过优先级互斥+差值权重归因方法，拆解主要影响因素为游戏亏损、盲盒亏损、库存消耗、主播开播减少、用户活跃流失，并匹配运营修复策略。次月队列充值回升72.9万美金，项目沉淀为超R充值异动AI辅助预警与运营修复闭环。
+        </p>
+        <div class="card-tags">
+          <span class="tag">异动归因</span>
+          <span class="tag">用户分层</span>
+          <span class="tag">漏斗分析</span>
+          <span class="tag">运营修复</span>
+          <span class="tag">优先级权重</span>
+        </div>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a class="p-card" href="sab.html" target="_blank" rel="noopener">
+      <div class="card-icon icon-purple">🎯</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <span class="card-title">主播SAB流量分层策略效果评估与复评机制优化</span>
+          <span class="badge badge-ab">策略评估</span>
+        </div>
+        <p class="card-desc">
+          负责团播SAB分层机制上线复盘，构建流量分发、观看质量、付费转化全链路指标，并搭建SQL取数模板。分析发现上线后流量利用效率由18.4%提升至22.5%，主播总收礼金额由95万提升至120万；评级主播ARPU优于未评级主播。进一步识别32名高流量低ARPU、低流量高ARPU的错配主播，提出将观看UV、收礼金额、ARPU纳入复评机制，并落地复评建议系统，实现每周自动化推送。
+        </p>
+        <div class="card-tags">
+          <span class="tag">策略评估</span>
+          <span class="tag">流量策略</span>
+          <span class="tag">转化分析</span>
+          <span class="tag">ARPU</span>
+          <span class="tag">自动化推送</span>
+        </div>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a class="p-card" href="guild.html" target="_blank" rel="noopener">
+      <div class="card-icon icon-green">🏛️</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <span class="card-title">公会经营指标体系与AI自动化监控系统</span>
+          <span class="badge badge-auto">自动化</span>
+        </div>
+        <p class="card-desc">
+          主导设计并落地110+签约公会每日自动化运营分析系统，基于营收表现、生态健康双维度分类框架，构建公会运营指标体系，自动识别风险/优质/潜力公会，封装Skill实现每日报告自动推送。
+        </p>
+        <div class="card-tags">
+          <span class="tag">指标体系</span>
+          <span class="tag">公会分类</span>
+          <span class="tag">自动化报告</span>
+          <span class="tag">运营监控</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+  </div>
+
+  <footer class="p-footer">
+    高宇 · 数据分析作品集 · 欢聚集团（Bigo Live）实习项目 · 已脱敏处理
+  </footer>
+
+</div>
+</body>
+</html>
